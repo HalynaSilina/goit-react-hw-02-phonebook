@@ -16,7 +16,10 @@ class App extends Component {
   };
 
   addContact = (name, number) => {
-    // const { contacts } = this.state;
+    const { contacts } = this.state;
+    if (contacts.some(contact => contact.name === name)) {
+      return alert(`${name} is already in contacts`);
+    }
     const contact = {
       name,
       number,
@@ -27,12 +30,18 @@ class App extends Component {
     }));
   };
 
+  deleteContact = id => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== id),
+    }));
+  };
+
   handleFilterChange = evt => {
     const { value } = evt.currentTarget;
     this.setState({ filter: value });
   };
 
-  filterByName = (filter) => {
+  filterByName = filter => {
     return this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter)
     );
@@ -41,14 +50,13 @@ class App extends Component {
   render() {
     const normalizedFilter = this.state.filter.toLowerCase();
     const filtredContacts = this.filterByName(normalizedFilter);
-    console.log(filtredContacts)
     return (
       <div>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.handleFilterChange} />
-        <ContactList contacts={filtredContacts} />
+        <ContactList contacts={filtredContacts} onDelete={this.deleteContact} />
       </div>
     );
   }
