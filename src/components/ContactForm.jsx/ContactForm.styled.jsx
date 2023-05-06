@@ -61,15 +61,16 @@ export const Button = styled.button`
   background-size: 200% auto;
   background-image: linear-gradient(
     45deg,
-    #388d2e 0%,
+    #F9F871 0%,
     #ef972c 51%,
-    #388d2e 100%
+    #F9F871 100%
   );
   :hover,
   :focus {
     background-position: right center;
     transform: scale(1.1);
-    border-color: #388d2e;
+    border-color: #F9F871;
+    color: #003252;
   }
   :active {
     transform: scale(0.95);

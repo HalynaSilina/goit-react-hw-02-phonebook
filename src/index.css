@@ -13,6 +13,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: #321C01;
 }
 
 @media screen and (min-width: 425px) {
