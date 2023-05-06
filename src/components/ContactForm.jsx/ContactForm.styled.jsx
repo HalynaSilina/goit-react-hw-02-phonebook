@@ -15,6 +15,13 @@ gap: 12px;
 @media screen and (max-width: 1024px) {
     max-width: 600px;
 }
+@media screen and (min-width: 1024px) {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
 `;
 
 export const Label = styled.label`
@@ -28,7 +35,7 @@ line-height: 1.14;
 `
 
 export const Input = styled.input`
-padding: 12px 8px;
+padding: 8px 12px;
 font-size: 18px;
 line-height: 1.12;
 font-style: italic;
@@ -48,5 +55,5 @@ border-radius: 8px;
 background-color: #EF972C;
 font-size: 18px;
 font-weight: 500;
-
+cursor: pointer;
 `
