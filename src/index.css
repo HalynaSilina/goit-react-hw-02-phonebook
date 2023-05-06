@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #C9F7FF;
+  background-color: #c9f7ff;
   background-image: url(./images/back-mobile.jpg);
   background-position: center;
   background-size: cover;
@@ -27,13 +27,13 @@ body {
     background-position: right bottom;
   }
   @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  body{
-    background-image: url(./images/back-desktop-2x.jpg);
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    body {
+      background-image: url(./images/back-desktop-2x.jpg);
+    }
   }
-}
 }
 
 code {

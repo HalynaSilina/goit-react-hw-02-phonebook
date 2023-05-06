@@ -22,12 +22,12 @@ export const Title = styled.h1`
 `;
 
 export const Contacts = styled.h2`
-margin-top: 50px;
-font-weight: 700;
-text-align: center;
-font-size: 32px;
-@media screen and (min-width: 1024px) {
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-`
+  margin-top: 50px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 32px;
+  @media screen and (min-width: 1024px) {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+`;
