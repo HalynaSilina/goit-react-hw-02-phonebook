@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import ContactForm from './ContactForm.jsx/ContactForm';
-import Filter from './Filter.jsx/Filter';
-import ContactList from './ContactList/ContactList';
+import ContactForm from '../ContactForm.jsx/ContactForm';
+import Filter from '../Filter.jsx/Filter';
+import ContactList from '../ContactList/ContactList';
+import { Container } from './App.styled';
 
 class App extends Component {
   state = {
@@ -51,13 +52,13 @@ class App extends Component {
     const normalizedFilter = this.state.filter.toLowerCase();
     const filtredContacts = this.filterByName(normalizedFilter);
     return (
-      <div>
+      <Container>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
         <h2>Contacts</h2>
         <Filter value={this.state.filter} onChange={this.handleFilterChange} />
         <ContactList contacts={filtredContacts} onDelete={this.deleteContact} />
-      </div>
+      </Container>
     );
   }
 }
