@@ -70,7 +70,6 @@ export const Button = styled.button`
     background-position: right center;
     transform: scale(1.1);
     border-color: #F9F871;
-    color: #003252;
   }
   :active {
     transform: scale(0.95);
